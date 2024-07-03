@@ -15,7 +15,7 @@ uvicorn app.main:app --reload
 
 ### Add database connection string in .env file
 
-DATABASE_URL=postgresql://user:password@localhost:5432/mydatabase
+DATABASE_URL=postgresql+asyncpg://your_user:your_password@localhost/database_name
 
 ### Download the necessary packages for the project run this command
 
@@ -25,14 +25,14 @@ pip install -r requirements.txt
 
 https://pokeapi.co/api/v2/pokemon?limit=100
 
-### API for Pokemons list that will come from Postgres databse
+### API for Pokemons list that will come from Postgres database and use this url in browser
 
 http://127.0.0.1:8000/api/v1/pokemons
 
-### To see list of pokemons with their name by following query params
+### To see list of pokemons with their name by following query params to filter by their name
 
 http://127.0.0.1:8000/api/v1/pokemons?name=any_name
 
-### To see list of pokemons with their name and type by following query params
+### To see list of pokemons with their name and type by following query params to filter out by thier name and their type
 
 http://127.0.0.1:8000/api/v1/pokemons?name=some_name&type=some_type
