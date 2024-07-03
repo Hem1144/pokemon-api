@@ -17,7 +17,7 @@ async def get_db():
 
 async def fetch_and_store_pokemon_data(db: AsyncSession):
     async with httpx.AsyncClient() as client:
-        response = await client.get("https://pokeapi.co/api/v2/pokemon?limit=50")
+        response = await client.get("https://pokeapi.co/api/v2/pokemon?limit=100")
         response.raise_for_status()
         data = response.json()
         for result in data["results"]:

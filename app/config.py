@@ -1,9 +1,10 @@
-from pydantic_settings import BaseSettings
+from dotenv import load_dotenv
+import os
 
-class Settings(BaseSettings):
-    database_url: str
+load_dotenv()
 
-    class Config:
-        env_file = ".env"
+class Settings:
+    def __init__(self):
+        self.database_url = os.getenv('DATABASE_URL')
 
 settings = Settings()
