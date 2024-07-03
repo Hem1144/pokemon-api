@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pokemon-task"
+version = "0.1.0"
+description = ""
+authors = ["Hem1144 <hemlaldulal.986@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+uvicorn = "^0.30.1"
+fastapi = "^0.111.0"
+pydantic = "^2.8.0"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.31"}
+asyncpg = "^0.29.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
